@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+# 📚 Book Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Book Finder is a responsive web application built with **React**, **Vite**, and **Tailwind CSS** that allows users to search for books by **title** or **author** using the [Open Library API](https://openlibrary.org/developers/api).  
+It presents search results in elegant, compact book cards with pagination support and a clean centered layout optimized for all screen sizes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- 🔍 **Search by Title or Author** — Instantly search for books using either the book title or author name.
+- 🖼️ **Book Cards** — Each result displays cover, title, author, and year.
+- 📱 **Mobile-Friendly Design** — Fully responsive and looks great on any device.
+- 🧭 **Pagination** — Seamlessly navigate through multiple pages of search results.
+- 🎨 **Modern UI** — Consistent layout, reduced card height, and centered main container for improved readability.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Category | Technology |
+|-----------|-------------|
+| Frontend | [React 18+](https://react.dev/) |
+| Build Tool | [Vite](https://vitejs.dev/) |
+| Styling | [Tailwind CSS](https://tailwindcss.com/) |
+| API | [Open Library Search API](https://openlibrary.org/developers/api) |
+| Icons | [Lucide React](https://lucide.dev/) |
+| Deployment | *(Optional)* Vercel / Netlify / GitHub Pages |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📦 Installation & Setup
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/yourusername/book-finder.git
+cd book-finder
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2️⃣ Install dependencies
+npm run dev
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 3️⃣ Run the development server
+npm run dev
+The app will be available at:
+👉 http://localhost:5173
+
+
+
+## API reference
+https://openlibrary.org/search.json
